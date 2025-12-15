@@ -72,4 +72,4 @@ my-portfolio/
 📸 截图示例
 | 亮色模式 | 暗色模式 |
 |--------|------------------|
-![亮色模式](./assets/screenshot-light.png) | ![暗色模式](./assets/screenshot-dark.png)
+![亮色模式](assets/screenshot-light.png) | ![暗色模式](assets/screenshot-dark.png)
