@@ -22,20 +22,14 @@
 
 ## 📁 项目结构
 my-portfolio/
-
 ├──assets/
-
     ├── avatar.png          # 头像
-
     ├── favicon.png         # 网站图标（32×32 或 64×64）
-
     ├── screenshot-light.png
-
     ├── screenshot-dark.png
-
 ├── index.html          # 主页面
 ├── index.css           # 样式文件
-├── index.js           # 交互逻辑（主题 + 动画）
+├── .js           # 交互逻辑（主题 + 动画）
 └── README.md           # 本说明文档
 
 ```Text
@@ -50,27 +44,16 @@ my-portfolio/
 > 
 🌐 在线预览
 👉 https://your-username.github.io/my-portfolio
-
 如何部署到 GitHub Pages？
-
 将代码推送到 GitHub 仓库
-
 进入仓库 → Settings → Pages
-
 在 Source 中选择 Deploy from a branch
-
 Branch 选择 main（或 master），保存
-
 等待 1 分钟，即可通过上述链接访问！
-
 📝 自定义指南
-
 修改个人信息：编辑 index.html 中的姓名、简介、联系方式
-
 更换头像：将 .avatar-placeholder 替换为 <img src="/assets/xxx.png">
-
 调整颜色：在 style.css 中修改亮色/暗色主题的背景与文字色
-
 📸 截图示例
 | 亮色模式 | 暗色模式 |
 |--------|------------------|
