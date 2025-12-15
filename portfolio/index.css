@@ -4,6 +4,32 @@ body {
   line-height: 1.6;
   color: #333;
   background: #f9f9f9;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark-theme {
+  background: #121212;
+  color: #e0e0e0;
+}
+body.dark-theme header,
+body.dark-theme section,
+body.dark-theme footer {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+body.dark-theme #theme-toggle {
+  background-color: #555;
+}
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  z-index: 1;
+  cursor: pointer;
 }
 main {
   max-width: 800px;
@@ -40,6 +66,16 @@ h2 {
 footer {
   text-align: center;
 }
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 600px) {
   main {
     padding: 10px;
