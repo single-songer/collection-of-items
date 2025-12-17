@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小米商城 - 静态仿写</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <button id="theme-toggle" aria-label="暗黑模式">🌙</button>
+  <!-- 1. 顶部导航栏 -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo"><a href="#">小米官网</a></div>
+      <details>
+        <summary class="hamburger" aria-label="打开导航菜单">
+          <span></span>
+          <span></span>
+          <span></span>
+        </summary>
+        <nav class="nav-menu mobile">
+          <a href="#">手机</a>
+          <a href="#">电视</a>
+          <a href="#">笔记本</a>
+          <a href="#">家电</a>
+          <a href="#">路由器</a>
+          <a href="#">服务</a>
+        </nav>
+      </details>
+      <nav class="nav-menu desktop">
+        <a href="#">手机</a>
+        <a href="#">电视</a>
+        <a href="#">笔记本</a>
+        <a href="#">家电</a>
+        <a href="#">路由器</a>
+        <a href="#">服务</a>
+      </nav>
+      <div class="nav-right">
+        <input type="text" placeholder="搜索商品" class="search-input">
+        <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <!-- 2.轮播图区域 -->
+    <section class="banner">
+      <img src="https://picsum.photos/1200/400?random=1" alt="轮播图">
+    </section>
+    <!-- 3. 商品分类导航 -->
+    <section class="category-nav">
+      <div class="container">
+        <div class="category-item">
+          <i class="fas fa-mobile-alt"></i>
+          <span>手机</span>
+        </div>
+        <div class="category-item">
+          <i class="fas fa-tv"></i>
+          <span>电视</span>
+        </div>
+        <div class="category-item">
+          <i class="fas fa-laptop"></i>
+          <span>笔记本</span>
+        </div>
+        <div class="category-item">
+          <i class="fas fa-blender"></i>
+          <span>家电</span>
+        </div>
+        <div class="category-item">
+          <i class="fas fa-wifi"></i>
+          <span>路由器</span>
+        </div>
+        <div class="category-item">
+          <i class="fas fa-headphones"></i>
+          <span>耳机</span>
+        </div>
+      </div>
+    </section>
+    <!-- 4.商品推荐区 -->
+    <section class="products">
+      <div class="container">
+        <h2>热门推荐</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://picsum.photos/200/200?random=2" alt="商品">
+            <h3>小米笔记本 Pro</h3>
+            <p class="price">￥5,699</p>
+            <button class="add-to-cart">加入购物车</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/200?random=3" alt="商品">
+            <h3>小米 14 Pro</h3>
+            <p class="price">￥4,999</p>
+            <button class="add-to-cart">加入购物车</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/200?random=4" alt="商品">
+            <h3>Redmi K70</h3>
+            <p class="price">￥2,499</p>
+            <button class="add-to-cart">加入购物车</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/200/200?random=5" alt="商品">
+            <h3>小米电视 s75</h3>
+            <p class="price">￥3,299</p>
+            <button class="add-to-cart">加入购物车</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- 5.页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy;2025 小米商城仿写项目（学习用途）</p>
+      <p>本项目仅用于前端学习,非商业用途</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>
