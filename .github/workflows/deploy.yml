@@ -2,7 +2,7 @@ name: Deploy mi-homepage and portfolio
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-deploy:
@@ -15,6 +15,7 @@ jobs:
       - name: Setup Ruby for mi-homepage
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3.2"
           working-directory: ./mi-homepage
           bundler-cache: true
 
@@ -26,6 +27,7 @@ jobs:
       - name: Setup Ruby for portfolio
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3.2"
           working-directory: ./portfolio
           bundler-cache: true
 
