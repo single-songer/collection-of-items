@@ -1,0 +1,59 @@
+name: Deploy mi-homepage and portfolio
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Build mi-homepage → /mi-homepage
+      - name: Setup Ruby for mi-homepage
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: ./mi-homepage
+          bundler-cache: true
+
+      - name: Build mi-homepage
+        run: bundle exec jekyll build --destination ../_site/mi-homepage
+        working-directory: ./mi-homepage
+
+      # Build portfolio → /portfolio
+      - name: Setup Ruby for portfolio
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: ./portfolio
+          bundler-cache: true
+
+      - name: Build portfolio
+        run: bundle exec jekyll build --destination ../_site/portfolio
+        working-directory: ./portfolio
+
+      # Optional: Add a root index.html as homepage
+      - name: Create root index (optional)
+        run: |
+          mkdir -p _site
+          cat > _site/index.html <<EOF
+          <!DOCTYPE html>
+          <html>
+          <head><title>My Sites</title></head>
+          <body>
+            <h1>My Projects</h1>
+            <ul>
+              <li><a href="mi-homepage/">Mi Homepage</a></li>
+              <li><a href="portfolio/">Portfolio</a></li>
+            </ul>
+          </body>
+          </html>
+          EOF
+
+      # Deploy
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
