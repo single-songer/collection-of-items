@@ -1,2 +1,14 @@
-url: https://single-songer.github.io
-baseurl: /collection-of-items/portfolio
+title: My Portfolio
+description: A showcase of my work.
+baseurl: /collection-of-items/portfolio    # ← 关键！
+url: https://single-songer.github.io        # ← 替换 yourusername
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
