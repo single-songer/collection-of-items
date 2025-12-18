@@ -30,11 +30,11 @@
 
 1. 克隆本项目：
    ```bash
-   git clone https://github.com/your-username/todo-list.git
+   git clone git@github.com:single-songer/collection-of-items.git
    ```
     -进入目录并打开**index.html**
     ```bash
-    cd todo-list
+    cd todo-app
     open index.html #mac
     start index.html #window
     ```
