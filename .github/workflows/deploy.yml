@@ -35,6 +35,18 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/portfolio
         working-directory: ./portfolio
 
+      # Build portfolio → /portfolio
+      - name: Setup Ruby for todo-app
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          working-directory: ./todo-app
+          bundler-cache: true
+
+      - name: Build todo-app
+        run: bundle exec jekyll build --destination ../_site/todo-app
+        working-directory: ./todo-app
+
       # Optional: Add a root index.html as homepage
       - name: Create root index (optional)
         run: |
@@ -48,6 +60,7 @@ jobs:
             <ul>
               <li><a href="mi-homepage/">Mi Homepage</a></li>
               <li><a href="portfolio/">Portfolio</a></li>
+              <li><a href="todo-app/">Portfolio</a></li>
             </ul>
           </body>
           </html>
