@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的待办事项</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>📝 我的待办事项</h1>
+    <!-- 输入区 -->
+    <div class="input-section">
+      <input type="text" placeholader="输入新任务,按回车添加..." id="task-input">
+      <button id="add-btn">+</button>
+    </div>
+    <!-- 统计区域 -->
+    <div class="stats">
+      共<span id="total-count">0</span>项
+      <span id="remaining-count">0</span>项未完成
+    </div>
+    <!-- 任务列表 -->
+    <ul id="task-list"></ul>
+    <!-- 清空按钮 -->
+    <button id="clear-completed-btn" class="clear-btn">清空已完成</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
