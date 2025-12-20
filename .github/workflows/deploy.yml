@@ -48,16 +48,16 @@ jobs:
         working-directory: ./todo-app
 
         # Build portfolio → /weatcher-app
-      - name: Setup Ruby for weatcher-app
+      - name: Setup Ruby for weather-app
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-          working-directory: ./weatcher-app
+          working-directory: ./weather-app
           bundler-cache: true
 
-      - name: Build weatcher-app
-        run: bundle exec jekyll build --destination ../_site/weatcher-app
-        working-directory: ./weatcher-app
+      - name: Build weather-app
+        run: bundle exec jekyll build --destination ../_site/weather-app
+        working-directory: ./weather-app
 
       # Optional: Add a root index.html as homepage
       - name: Create root index (optional)
@@ -73,7 +73,7 @@ jobs:
               <li><a href="mi-homepage/">Mi Homepage</a></li>
               <li><a href="portfolio/">Portfolio</a></li>
               <li><a href="todo-app/">TodoApp</a></li>
-              <li><a href="weatcher-app/">WeatcherApp</a></li>
+              <li><a href="weather-app/">WeatherApp</a></li>
             </ul>
           </body>
           </html>
