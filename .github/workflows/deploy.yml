@@ -1,4 +1,4 @@
-name: Deploy mi-homepage and portfolio
+name: Deploy Collection of Items
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/portfolio
         working-directory: ./portfolio
 
-      # Build portfolio → /todo-app
+      # Build todo-app → /todo-app
       - name: Setup Ruby for todo-app
         uses: ruby/setup-ruby@v1
         with:
