@@ -35,7 +35,7 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/portfolio
         working-directory: ./portfolio
 
-      # Build portfolio → /portfolio
+      # Build portfolio → /todo-app
       - name: Setup Ruby for todo-app
         uses: ruby/setup-ruby@v1
         with:
@@ -46,6 +46,18 @@ jobs:
       - name: Build todo-app
         run: bundle exec jekyll build --destination ../_site/todo-app
         working-directory: ./todo-app
+
+        # Build portfolio → /weatcher-app
+      - name: Setup Ruby for weatcher-app
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          working-directory: ./weatcher-app
+          bundler-cache: true
+
+      - name: Build weatcher-app
+        run: bundle exec jekyll build --destination ../_site/weatcher-app
+        working-directory: ./weatcher-app
 
       # Optional: Add a root index.html as homepage
       - name: Create root index (optional)
@@ -61,6 +73,7 @@ jobs:
               <li><a href="mi-homepage/">Mi Homepage</a></li>
               <li><a href="portfolio/">Portfolio</a></li>
               <li><a href="todo-app/">TodoApp</a></li>
+              <li><a href="weatcher-app/">WeatcherApp</a></li>
             </ul>
           </body>
           </html>
