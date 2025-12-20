@@ -51,26 +51,26 @@ jobs:
       - name: 🔧 Setup Ruby for weather-app
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: "3.2"
           working-directory: ./weather-app
           bundler-cache: true
 
       - name: 🏗️ Build weather-app
         run: bundle exec jekyll build --destination ../_site/weather-app
         working-directory: ./weather-app
-        
+
       # --- 新增：构建 movie-search-app ---
       - name: 🔧 Setup Ruby for movie-search-app
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: "3.2"
           working-directory: ./movie-search-app
           bundler-cache: true
 
       - name: 🏗️ Build movie-search-app
         run: bundle exec jekyll build --destination ../_site/movie-search-app
         working-directory: ./movie-search-app
-        
+
       # Optional: Add a root index.html as homepage
       - name: Create root index (optional)
         run: |
@@ -86,7 +86,7 @@ jobs:
               <li><a href="portfolio/">Portfolio</a></li>
               <li><a href="todo-app/">TodoApp</a></li>
               <li><a href="weather-app/">WeatherApp</a></li>
-              <li><a href="movie-search-app/">MovieSearchApp</a></li>
+              <li><a href="movie-search-app/frontend">MovieSearchApp</a></li>
             </ul>
           </body>
           </html>
