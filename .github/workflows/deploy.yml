@@ -47,15 +47,15 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/todo-app
         working-directory: ./todo-app
 
-        # Build portfolio → /weatcher-app
-      - name: Setup Ruby for weather-app
+        # --- 新增：构建 weather-app ---
+      - name: 🔧 Setup Ruby for weather-app
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
+          ruby-version: '3.2'
           working-directory: ./weather-app
           bundler-cache: true
 
-      - name: Build weather-app
+      - name: 🏗️ Build weather-app
         run: bundle exec jekyll build --destination ../_site/weather-app
         working-directory: ./weather-app
 
