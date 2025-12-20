@@ -1,6 +1,6 @@
-title: My Todo App
+title: My Weather App
 description: A showcase of my work.
-baseurl: /collection-of-items/todo-app    # ← 关键！
+baseurl: /collection-of-items/weather-app    # ← 关键！
 url: https://single-songer.github.io        # ← 替换 yourusername
 
 theme: minima
