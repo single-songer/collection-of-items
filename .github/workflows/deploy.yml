@@ -85,12 +85,12 @@ jobs:
 
 
         # --- 新增：构建 kanban-board ---
-        - name: 🔧 Setup Ruby for kanban-board
-          uses: ruby/setup-ruby@v1
-          with:
-            ruby-version: "3.2"
-            working-directory: ./kanban-board
-            bundler-cache: true 
+      - name: 🔧 Setup Ruby for kanban-board
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          working-directory: ./kanban-board
+          bundler-cache: true 
 
       - name: 🏗️ Build kanban-board
         run: bundle exec jekyll build --destination ../_site/kanban-board
