@@ -82,6 +82,19 @@ jobs:
       - name: 🏗️ Build blog-editor
         run: bundle exec jekyll build --destination ../_site/blog-editor
         working-directory: ./blog-editor
+
+
+        # --- 新增：构建 kanban-board ---
+        - name: 🔧 Setup Ruby for kanban-board
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: "3.2"
+            working-directory: ./kanban-board
+            bundler-cache: true 
+
+      - name: 🏗️ Build kanban-board
+        run: bundle exec jekyll build --destination ../_site/kanban-board
+        working-directory: ./kanban-board
       # Optional: Add a root index.html as homepage
       - name: Create root index (optional)
         run: |
