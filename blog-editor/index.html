@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📝 我的博客编辑器</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="light-theme">
+  <header>
+    <h1>📝 博客编辑器</h1>
+    <div class="controls">
+      <button id="theme-toggle">🌓 切换主题</button>
+      <button id="export-btn">📤 导出HTML</button>
+    </div>
+  </header>
+  <mian class="editor-container">
+    <textarea id="markdown-input" placeholder="在此输入博客内容...">
+      # 欢迎使用博客编辑器
+      支持 **加粗**、*斜体*、~~删除线~~、`代码`、[链接](https://github.com/)
+      - 列表1
+      - 列表2
+      1. 列表3
+      1. 列表4
+      > 引用
+      ![图片](https://picsum.photos/200/300)
+      ```js
+      console.log('hello world');
+      ```
+    </textarea>
+    <!-- 右侧：HTML预览 -->
+    <div id="preview" class="preview"></div>
+  </mian>
+  <script src="lib/marked.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

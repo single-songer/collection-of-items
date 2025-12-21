@@ -1,0 +1,98 @@
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --border-color: #dee2e6;
+  --code-bg: #f1f3f5;
+}
+
+.dark-theme {
+  --bg-primary: #121212;
+  -bg-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --border-color: #333;
+  --code-bg: #2d2d2d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+bofy {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+h1 {
+  font-size: 1.8rem;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 8px 16px;
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  opacity: 0.9;
+}
+.editor-container {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+#markdown-input,
+.preview {
+  width: 50%;
+  padding: 20px 40px;
+  resize: none;
+  outline: none;
+  border: none;
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  background: var(--bg-secondary);
+}
+#markdown-input {
+  border-right: 1px solid var(--border-color);
+}
+.preview {
+  overflow-y: auto;
+}
+/* 代码高亮样式 */
+.preview pre {
+  background-color: var(--code-bg);
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.preview code {
+  font-family: "Fira Code", monospace;
+}
+/* 手机端堆叠布局 */
+@media screen and (max-width: 768px) {
+  .editor-container {
+    flex-direction: column;
+    height: auto;
+  }
+  #markdown-input,
+  .preview {
+    width: 100%;
+    min-height: 300px;
+  }
+}

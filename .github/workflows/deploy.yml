@@ -71,6 +71,17 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/movie-search-app
         working-directory: ./movie-search-app
 
+        # --- 新增：构建 blog-editor ---
+      - name: 🔧 Setup Ruby for blog-editor
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          working-directory: ./blog-editor
+          bundler-cache: true
+
+      - name: 🏗️ Build blog-editor
+        run: bundle exec jekyll build --destination ../_site/blog-editor
+        working-directory: ./blog-editor
       # Optional: Add a root index.html as homepage
       - name: Create root index (optional)
         run: |
@@ -87,6 +98,7 @@ jobs:
               <li><a href="todo-app/">TodoApp</a></li>
               <li><a href="weather-app/">WeatherApp</a></li>
               <li><a href="movie-search-app/frontend">MovieSearchApp</a></li>
+              <li><a href="blog-editor">BlogEditor</a></li>
             </ul>
           </body>
           </html>
