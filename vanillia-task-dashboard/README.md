@@ -2,7 +2,7 @@
 
 > 一个**零框架、纯原生**的前端实战项目，仅用 HTML/CSS/JavaScript 实现完整功能。
 
-[👉 在线预览](https://你的用户名.github.io/vanilla-task-dashboard/)
+[👉 在线预览](https://single-songer.github.io/collection-of-items/vanillia-task-dashboard/)
 
 ## ✨ 功能亮点
 - ✅ **任务管理**：添加/删除待办事项
@@ -20,8 +20,7 @@
 - **工具**：Chrome DevTools、Lighthouse
 
 ## 📸 截图
-![Desktop View](./screenshot-desktop.png)  
-*(建议你截一张效果图放进来)*
+![Desktop View](/assets/images/demo.png)  
 
 ## 📦 本地运行
 ```bash
