@@ -120,7 +120,9 @@ jobs:
                 list-style: none;
               }
               li{
+              padding: 10px;
                 background:rgba(255,0,255,0.5)
+                margin-bottom: 10px;
                 }
             </style>
           </head>
