@@ -125,13 +125,13 @@ jobs:
                 margin-bottom: 10px;
                 border-radius: 5px;
                 }
-                li a{
-                text-decoration: none;
-                color: white;
-                font-size: 20px;
-                font-weight: bold;
-                text-align: center;  
-                }
+              li a{
+                  text-decoration: none;
+                  font-size: 20px;
+                  color: white;
+                  font-size: 20px;
+                  font-weight: bold;
+              }
             </style>
           </head>
           <body>
