@@ -97,7 +97,7 @@ jobs:
 
         # --- 新增：构建 vanillia-task-dashboard ---
       - name: 🔧 Setup Ruby for vanillia-task-dashboard
-        uses: ruby/setup-ruby@v1.173.0
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
           working-directory: ./kanban-board
