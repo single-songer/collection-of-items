@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => fetchWeather('上海'), 100)
 })
 DOM.updateWeatherBtn.addEventListener('click', function () {
-  const city = cityInput.value.trim()
+  const city = DOM.cityInput.value.trim()
   if (city) fetchWeather(city)
   else alert('请输入城市名称')
 })
