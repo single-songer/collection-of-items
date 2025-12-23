@@ -97,10 +97,10 @@ jobs:
 
         # --- 新增：构建 vanillia-task-dashboard ---
       - name: 🔧 Setup Ruby for vanillia-task-dashboard
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1.173.0
         with:
           ruby-version: "3.2"
-          working-directory: ./vanillia-task-dashboard
+          working-directory: ./kanban-board
           bundler-cache: true
 
       - name: 🏗️ Build vanillia-task-dashboard
@@ -113,7 +113,17 @@ jobs:
           cat > _site/index.html <<EOF
           <!DOCTYPE html>
           <html>
-          <head><title>My Sites</title></head>
+          <head>
+            <title>My Sites</title>
+            <style>
+              ul{
+                list-style: none;
+              }
+              li{
+                background:rgba(255,0,255,0.5)
+                }
+            </style>
+          </head>
           <body>
             <h1>My Projects</h1>
             <ul>
