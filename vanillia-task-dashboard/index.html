@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="一个基于原生 HTML/CSS/JavaScript 的任务管理面板，支持本地存储和实时天气。">
+  <link rel="preconnect" href="https://wttr.in" crossorigin>
+  <link rel="stylesheet" href="css/index.css">
+  <title>我的任务面板</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>我的任务面板</h1>
+    <p>管理每日待办事项，查看实时天气</p>
+  </header>
+  <main>
+    <section>
+      <h2>添加任务</h2>
+      <form action="">
+        <label for="new-task-input">任务内容</label>
+        <input type="text" id="new-task-input" name="task">
+        <button type="submit">添加任务</button>
+      </form>
+    </section>
+    <section>
+      <h2>待办事项</h2>
+      <ul id="task-list" aria-label="当前待办事项列表">
+        <!-- 任务将由 JavaScript 动态生成 -->
+        <li id="no-tasks-message" style="color: #888;font-style: italic;">暂无任务</li>
+      </ul>
+    </section>
+    <aside>
+      <h2>今日天气</h2>
+      <p>
+        <label for="city-input">城市：</label>
+        <input type="text" id="city-input" name="city" value="上海">
+        <button id="update-weather">更新天气</button>
+      </p>
+      <p id="weather-info" aria-live="polite">加载中...</p>
+    </aside>
+  </main>
+  <footer>
+    <p> &copy; 2025我的任务看板</p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
