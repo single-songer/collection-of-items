@@ -1,0 +1,14 @@
+title: My Tasks panel
+description: Use the natively built task panel.
+baseurl: /collection-of-items/vanillia-task-dashboard    # ← 关键！
+url: https://single-songer.github.io        # ← 替换 yourusername
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
